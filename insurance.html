@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn how Medicare, Medicaid, and private insurance covers mobility equipment from The Mobility Center. Check your eligibility and start the process today." />
+  <meta name="theme-color" content="#1e5fa8" />
+  <title>Insurance &amp; Financing | The Mobility Center</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .coverage-card {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    }
+    .coverage-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
+    .coverage-card__logo {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--space-5);
+      font-family: var(--font-heading);
+      font-size: var(--text-sm);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+    .coverage-card__logo--blue  { background: #dbeafe; color: #1e40af; }
+    .coverage-card__logo--green { background: #dcfce7; color: #15803d; }
+    .coverage-card__logo--indigo { background: #e0e7ff; color: #4338ca; }
+    .coverage-card__logo--orange { background: #ffedd5; color: #c2410c; }
+
+    .coverage-card__name { font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-2); color: var(--color-text); }
+    .coverage-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); line-height: 1.6; }
+    .coverage-list { display: grid; gap: var(--space-2); }
+    .coverage-list li {
+      display: flex; align-items: flex-start; gap: var(--space-3);
+      font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.5;
+    }
+    .coverage-list li svg { color: var(--color-success); flex-shrink: 0; margin-top: 1px; }
+
+    .faq-accordion { display: grid; gap: var(--space-3); }
+    .accordion-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .accordion-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: var(--space-5) var(--space-6);
+      text-align: left;
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-text);
+      background: none;
+      gap: var(--space-4);
+    }
+    .accordion-btn:hover { background: var(--color-primary-tint); }
+    .accordion-btn:focus-visible { outline: 3px solid var(--color-primary); outline-offset: -3px; }
+    .accordion-btn__icon {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      color: var(--color-primary);
+      transition: transform var(--transition-base);
+    }
+    .accordion-btn[aria-expanded="true"] .accordion-btn__icon { transform: rotate(180deg); }
+    .accordion-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-slow), opacity var(--transition-base);
+    }
+    .accordion-content__inner {
+      padding: 0 var(--space-6) var(--space-5);
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: var(--radius-full);
+      background: var(--color-primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--text-lg);
+      flex-shrink: 0;
+    }
+    .eligibility-step {
+      display: flex;
+      gap: var(--space-5);
+      align-items: flex-start;
+    }
+    .eligibility-step__content h4 { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2); }
+    .eligibility-step__content p  { font-size: var(--text-base); color: var(--color-text-muted); margin: 0; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar__inner">
+      <div class="top-bar__items">
+        <span class="top-bar__item"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:+15551234567">(555) 123-4567</a></span>
+        <span class="top-bar__item"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@themobilitycenter.com">info@themobilitycenter.com</a></span>
+      </div>
+      <span>Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 9am–3pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="The Mobility Center — Home">
+        <span class="logo__icon" aria-hidden="true"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg></span>
+        <span class="logo__text"><span class="logo__name">The Mobility Center</span><span class="logo__tagline">Licensed DME Provider</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="index.html"     class="nav__link">Home</a></li>
+          <li><a href="about.html"     class="nav__link">About Us</a></li>
+          <li><a href="products.html"  class="nav__link">Products</a></li>
+          <li><a href="insurance.html" class="nav__link">Insurance</a></li>
+          <li><a href="contact.html"   class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta"><a href="contact.html" class="btn btn--cta btn--sm">Request Equipment</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Mobile navigation">
+  <div class="mobile-menu__header">
+    <a href="index.html" class="logo"><span class="logo__icon" aria-hidden="true"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo__text"><span class="logo__name">The Mobility Center</span></span></a>
+    <button class="mobile-menu__close" id="menuClose" aria-label="Close menu"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+  </div>
+  <nav aria-label="Mobile navigation"><ul class="mobile-nav" role="list"><li><a href="index.html" class="mobile-nav__link">Home</a></li><li><a href="about.html" class="mobile-nav__link">About Us</a></li><li><a href="products.html" class="mobile-nav__link">Products &amp; Services</a></li><li><a href="insurance.html" class="mobile-nav__link">Insurance &amp; Financing</a></li><li><a href="contact.html" class="mobile-nav__link">Contact Us</a></li></ul></nav>
+  <div class="mobile-menu__cta"><a href="contact.html" class="btn btn--cta btn--full">Request Equipment</a><a href="insurance.html" class="btn btn--outline btn--full">Check Insurance</a></div>
+</div>
+
+<main id="main">
+
+  <!-- Page Hero -->
+  <section class="page-hero" aria-labelledby="pageTitle">
+    <div class="container">
+      <span class="page-hero__eyebrow">Coverage &amp; Eligibility</span>
+      <h1 class="page-hero__title" id="pageTitle">Insurance &amp; Financing</h1>
+      <p class="page-hero__subtitle">We work directly with Medicare, Medicaid, and most private insurers so you pay as little as possible for the equipment you need.</p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb__sep" aria-hidden="true">›</span><span aria-current="page">Insurance &amp; Financing</span></nav>
+  </div>
+
+  <!-- Insurance Overview -->
+  <section class="section" aria-labelledby="insuranceHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Accepted Insurance</span>
+        <h2 class="section__title" id="insuranceHeading">We Accept Most Major Insurance Plans</h2>
+        <p class="section__subtitle">Our billing team has decades of experience navigating insurance requirements — we handle everything on your behalf.</p>
+      </div>
+
+      <div class="grid-2" style="gap:var(--space-6)">
+        <div class="coverage-card" data-animate data-animate-delay="100">
+          <div class="coverage-card__logo coverage-card__logo--blue">MC</div>
+          <div class="coverage-card__name">Medicare Part B</div>
+          <p class="coverage-card__desc">Medicare Part B covers durable medical equipment (DME) that is medically necessary for use in your home. This is the most common coverage type for our patients.</p>
+          <ul class="coverage-list" role="list">
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Manual &amp; power wheelchairs</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Mobility scooters (power-operated vehicles)</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Walkers and rollators</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Lift chair mechanisms</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>20% patient coinsurance after deductible</li>
+          </ul>
+        </div>
+
+        <div class="coverage-card" data-animate data-animate-delay="200">
+          <div class="coverage-card__logo coverage-card__logo--green">MD</div>
+          <div class="coverage-card__name">Medicaid</div>
+          <p class="coverage-card__desc">Medicaid programs in most states cover a broader range of mobility equipment, often with little or no out-of-pocket cost for eligible beneficiaries.</p>
+          <ul class="coverage-list" role="list">
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Often covers full equipment cost</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Full lift chair coverage (state-dependent)</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Home modifications &amp; ramps</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Complex rehab technology</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Low or zero patient responsibility</li>
+          </ul>
+        </div>
+
+        <div class="coverage-card" data-animate data-animate-delay="100">
+          <div class="coverage-card__logo coverage-card__logo--indigo">PPO</div>
+          <div class="coverage-card__name">Private PPO &amp; HMO Plans</div>
+          <p class="coverage-card__desc">Most private insurance plans include DME benefits. We are in-network with major carriers and work with out-of-network insurers as well.</p>
+          <ul class="coverage-list" role="list">
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Aetna, Cigna, UnitedHealth</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Blue Cross Blue Shield</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Humana &amp; Molina</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Veterans Affairs (VA)</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Workers' Compensation</li>
+          </ul>
+        </div>
+
+        <div class="coverage-card" data-animate data-animate-delay="200">
+          <div class="coverage-card__logo coverage-card__logo--orange">$$</div>
+          <div class="coverage-card__name">Self-Pay &amp; Financing</div>
+          <p class="coverage-card__desc">No insurance? No problem. We offer competitive self-pay pricing and flexible financing options to make equipment accessible to everyone.</p>
+          <ul class="coverage-list" role="list">
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Transparent self-pay pricing</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>0% financing available (OAC)</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Rental options for short-term needs</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Rent-to-own programs</li>
+            <li role="listitem"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Flexible monthly payment plans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Qualify -->
+  <section class="section section--alt" aria-labelledby="qualifyHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Qualification Process</span>
+        <h2 class="section__title" id="qualifyHeading">How to Qualify for Your Equipment</h2>
+        <p class="section__subtitle">Most patients qualify for coverage without even knowing it. Here's how the process works from start to finish.</p>
+      </div>
+
+      <div style="display:grid;gap:var(--space-6);max-width:760px;margin:0 auto">
+        <div class="eligibility-step" data-animate data-animate-delay="100">
+          <span class="step-badge" aria-hidden="true">1</span>
+          <div class="eligibility-step__content">
+            <h4>Contact Us to Start</h4>
+            <p>Call us or fill out our eligibility form below. We'll collect your insurance information, Medicare/Medicaid number, and details about your mobility limitations.</p>
+          </div>
+        </div>
+        <div class="eligibility-step" data-animate data-animate-delay="200">
+          <span class="step-badge" aria-hidden="true">2</span>
+          <div class="eligibility-step__content">
+            <h4>Free Insurance Verification</h4>
+            <p>Our billing team contacts your insurance plan to verify your benefits, confirm we are in-network, and determine your expected out-of-pocket cost before you commit to anything.</p>
+          </div>
+        </div>
+        <div class="eligibility-step" data-animate data-animate-delay="300">
+          <span class="step-badge" aria-hidden="true">3</span>
+          <div class="eligibility-step__content">
+            <h4>Physician Coordination</h4>
+            <p>We work directly with your doctor to obtain the required prescription, face-to-face examination documentation, and written order. We provide the paperwork — your doctor signs.</p>
+          </div>
+        </div>
+        <div class="eligibility-step" data-animate data-animate-delay="400">
+          <span class="step-badge" aria-hidden="true">4</span>
+          <div class="eligibility-step__content">
+            <h4>Clinical Assessment (if required)</h4>
+            <p>For complex equipment like power chairs, our licensed ATP may conduct an in-home or in-office assessment to document your clinical need according to Medicare LCD criteria.</p>
+          </div>
+        </div>
+        <div class="eligibility-step" data-animate data-animate-delay="100">
+          <span class="step-badge" aria-hidden="true">5</span>
+          <div class="eligibility-step__content">
+            <h4>Prior Authorization &amp; Approval</h4>
+            <p>We submit all documentation to your insurer for prior authorization. We monitor the status and follow up until approval is received — typically 5–14 business days.</p>
+          </div>
+        </div>
+        <div class="eligibility-step" data-animate data-animate-delay="200">
+          <span class="step-badge" aria-hidden="true">6</span>
+          <div class="eligibility-step__content">
+            <h4>Delivery, Fitting &amp; Training</h4>
+            <p>Once approved, we schedule delivery at your convenience. Our specialist delivers, fits, and trains you on your equipment — and bills your insurance directly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Required -->
+  <section class="section" aria-labelledby="docsHeading">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:var(--space-10);align-items:start">
+        <div>
+          <div class="section__header" style="text-align:left;margin-bottom:var(--space-8)" data-animate>
+            <span class="section__eyebrow">What You'll Need</span>
+            <h2 class="section__title" id="docsHeading">Required Documentation</h2>
+            <p class="section__subtitle" style="margin:0;text-align:left">Having these documents ready speeds up the approval process significantly.</p>
+          </div>
+          <div class="doc-list" data-animate>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Insurance card (Medicare/Medicaid/private insurance)
+            </div>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+              Government-issued photo ID
+            </div>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Physician's written order / prescription
+            </div>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              Face-to-face examination notes (for power mobility)
+            </div>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Medical records documenting diagnosis &amp; functional limitations
+            </div>
+            <div class="doc-item">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              Proof of residence / home address
+            </div>
+          </div>
+          <div class="alert alert--info" style="margin-top:var(--space-6)" data-animate>
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong>Don't worry if you're missing documents.</strong> We can often help you obtain required documentation by coordinating with your physician and insurance company.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" aria-labelledby="faqHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Common Questions</span>
+        <h2 class="section__title" id="faqHeading">Insurance FAQ</h2>
+        <p class="section__subtitle">Answers to the most common insurance and eligibility questions we receive.</p>
+      </div>
+
+      <div class="faq-accordion accordion" style="max-width:800px;margin:0 auto" role="list">
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq1">
+            Does Medicare pay for power wheelchairs?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq1" role="region">
+            <div class="accordion-content__inner">
+              <p>Yes, Medicare Part B covers power wheelchairs (Group 2–5) when medically necessary. You must have a documented mobility limitation, a physician's prescription, and a face-to-face examination within 6 months. Medicare typically covers 80% after the Part B deductible is met; you pay the remaining 20% (or your Medigap plan covers it).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq2">
+            How long does insurance approval take?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq2" role="region">
+            <div class="accordion-content__inner">
+              <p>Standard walkers and manual wheelchairs often process within 2–5 business days. Power wheelchairs and complex equipment requiring prior authorization typically take 5–14 business days. We monitor your authorization status daily and will notify you immediately upon approval.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq3">
+            What if my doctor doesn't fill out the paperwork?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq3" role="region">
+            <div class="accordion-content__inner">
+              <p>We handle this regularly. Our team provides your physician's office with pre-filled documentation templates — they simply review and sign. We also follow up directly with the medical office to ensure timely completion. In most cases, this takes no additional effort from you.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq4">
+            Can I get equipment if I was recently denied?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq4" role="region">
+            <div class="accordion-content__inner">
+              <p>Yes! Many denials are due to incomplete documentation — not ineligibility. We review denied claims and often successfully resubmit with the correct supporting documentation. We can also assist with appeals. If insurance truly won't cover your item, we'll discuss self-pay and financing options.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq5">
+            Do I need a referral from my primary care doctor?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq5" role="region">
+            <div class="accordion-content__inner">
+              <p>For Medicare, any treating physician (primary care, specialist, etc.) can provide the required order. For private insurance HMO plans, a primary care referral is sometimes required. We verify your specific plan requirements before starting the process so there are no surprises.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-btn" aria-expanded="false" aria-controls="faq6">
+            How often can I get new equipment through Medicare?
+            <svg class="accordion-btn__icon" width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content" id="faq6" role="region">
+            <div class="accordion-content__inner">
+              <p>Medicare covers most mobility equipment on a 5-year replacement cycle. After 5 years of continuous use, you may be eligible for replacement. Equipment may be replaced sooner if it can no longer be repaired cost-effectively, or if your medical condition changes significantly. We track your equipment timeline and notify you when you may be eligible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility Form -->
+  <section class="section" aria-labelledby="eligibilityFormHeading" id="eligibility-form">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Free Verification</span>
+        <h2 class="section__title" id="eligibilityFormHeading">Check Your Insurance Eligibility</h2>
+        <p class="section__subtitle">Complete this form and our billing team will verify your coverage within one business day — at no cost or obligation.</p>
+      </div>
+
+      <div class="eligibility-card" data-animate data-form-wrap>
+        <form data-validate-form aria-label="Insurance eligibility check form" novalidate>
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="eli_first">First Name <span class="required" aria-label="required">*</span></label>
+              <input class="form-control" id="eli_first" name="first_name" type="text" autocomplete="given-name" placeholder="First name" data-validate="required minlen" data-minlen="2" aria-required="true" />
+              <span class="form-error" role="alert" style="display:none"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="eli_last">Last Name <span class="required" aria-label="required">*</span></label>
+              <input class="form-control" id="eli_last" name="last_name" type="text" autocomplete="family-name" placeholder="Last name" data-validate="required minlen" data-minlen="2" aria-required="true" />
+              <span class="form-error" role="alert" style="display:none"></span>
+            </div>
+          </div>
+
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="eli_phone">Phone Number <span class="required" aria-label="required">*</span></label>
+              <input class="form-control" id="eli_phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" data-validate="required phone" aria-required="true" />
+              <span class="form-error" role="alert" style="display:none"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="eli_email">Email Address</label>
+              <input class="form-control" id="eli_email" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-validate="email" />
+              <span class="form-error" role="alert" style="display:none"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eli_dob">Date of Birth <span class="required" aria-label="required">*</span></label>
+            <input class="form-control" id="eli_dob" name="dob" type="date" data-validate="required" aria-required="true" style="max-width:240px" />
+            <span class="form-error" role="alert" style="display:none"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eli_insurance">Insurance Type <span class="required" aria-label="required">*</span></label>
+            <select class="form-control" id="eli_insurance" name="insurance_type" data-validate="required" aria-required="true" style="max-width:360px">
+              <option value="">Select insurance type…</option>
+              <option value="medicare">Medicare</option>
+              <option value="medicaid">Medicaid</option>
+              <option value="medicare_medicaid">Medicare + Medicaid (Dual)</option>
+              <option value="ppo">Private PPO</option>
+              <option value="hmo">Private HMO</option>
+              <option value="va">Veterans Affairs (VA)</option>
+              <option value="workers_comp">Workers' Compensation</option>
+              <option value="self_pay">Self-Pay / No Insurance</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="form-error" role="alert" style="display:none"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eli_member_id">Insurance Member ID / Medicare Number</label>
+            <input class="form-control" id="eli_member_id" name="member_id" type="text" placeholder="Enter member ID (optional)" style="max-width:360px" />
+            <span class="form-helper">Your 11-character Medicare Beneficiary Identifier (MBI) or insurance member ID. Found on your insurance card.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eli_equipment">Equipment Needed <span class="required" aria-label="required">*</span></label>
+            <select class="form-control" id="eli_equipment" name="equipment_type" data-validate="required" aria-required="true" style="max-width:360px">
+              <option value="">Select equipment type…</option>
+              <option value="manual_wheelchair">Manual Wheelchair</option>
+              <option value="power_wheelchair">Power Wheelchair</option>
+              <option value="scooter">Mobility Scooter</option>
+              <option value="walker">Walker / Rollator</option>
+              <option value="lift_chair">Lift Chair</option>
+              <option value="ramp">Ramp / Home Modification</option>
+              <option value="repair">Repair / Maintenance</option>
+              <option value="unsure">Not Sure — Need Guidance</option>
+            </select>
+            <span class="form-error" role="alert" style="display:none"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eli_notes">Additional Information</label>
+            <textarea class="form-control" id="eli_notes" name="notes" placeholder="Please describe your mobility limitations or any other relevant information…" style="min-height:100px"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-check" for="eli_consent">
+              <input type="checkbox" id="eli_consent" name="consent" data-validate="required" aria-required="true" />
+              <span class="form-check__label">I authorize The Mobility Center to contact me and verify my insurance benefits. I understand this is a free service with no obligation. <span class="required" aria-label="required">*</span></span>
+            </label>
+            <span class="form-error" role="alert" style="display:none"></span>
+          </div>
+
+          <button type="submit" class="btn btn--cta btn--lg">Check My Eligibility — Free</button>
+        </form>
+
+        <div data-form-success class="form-success" style="display:none" tabindex="-1">
+          <div class="form-success__icon">
+            <svg width="36" height="36" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="form-success__title">Eligibility Request Received!</h3>
+          <p class="form-success__text">Our billing team will verify your insurance coverage and contact you within one business day. If you have urgent needs, call us at <a href="tel:+15551234567" style="color:var(--color-primary);font-weight:600">(555) 123-4567</a>.</p>
+          <a href="products.html" class="btn btn--primary">Browse Our Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-labelledby="insCtaHeading">
+    <div class="container">
+      <div data-animate>
+        <h2 class="cta-section__title" id="insCtaHeading">Questions About Your Coverage?</h2>
+        <p class="cta-section__text">Our insurance specialists are available Monday–Friday 8am–6pm to answer any questions about your coverage and eligibility.</p>
+        <div class="btn-group">
+          <a href="tel:+15551234567" class="btn btn--cta btn--lg">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call (555) 123-4567
+          </a>
+          <a href="contact.html" class="btn btn--outline-white btn--lg">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo" aria-label="The Mobility Center"><span class="logo__icon" aria-hidden="true"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo__text"><span class="logo__name">The Mobility Center</span><span class="logo__tagline">Licensed DME Provider</span></span></a><p class="footer-brand__desc">Empowering patients with the mobility equipment they need to live full, independent lives. Medicare, Medicaid &amp; most insurance accepted.</p></div>
+      <div class="footer-col"><h3 class="footer-col__title">Quick Links</h3><ul class="footer-links" role="list"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About Us</a></li><li><a href="products.html" class="footer-link">Products</a></li><li><a href="insurance.html" class="footer-link">Insurance</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div class="footer-col"><h3 class="footer-col__title">Products</h3><ul class="footer-links" role="list"><li><a href="products.html#manual-wheelchairs" class="footer-link">Manual Wheelchairs</a></li><li><a href="products.html#power-wheelchairs" class="footer-link">Power Wheelchairs</a></li><li><a href="products.html#scooters" class="footer-link">Mobility Scooters</a></li><li><a href="products.html#walkers" class="footer-link">Walkers &amp; Rollators</a></li><li><a href="products.html#repairs" class="footer-link">Repairs &amp; Service</a></li></ul></div>
+      <div class="footer-col"><h3 class="footer-col__title">Contact</h3><ul class="footer-links" role="list"><li><a href="tel:+15551234567" class="footer-link">(555) 123-4567</a></li><li><a href="mailto:info@themobilitycenter.com" class="footer-link">info@themobilitycenter.com</a></li><li><span class="footer-link">123 Healthcare Blvd, Suite 100<br>Your City, ST 00000</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p style="color:rgba(255,255,255,.45);font-size:var(--text-sm)">&copy; 2024 The Mobility Center. All rights reserved.</p><div class="footer-bottom__legal"><a href="#" class="footer-legal-link">Privacy Policy</a><a href="#" class="footer-legal-link">Terms of Service</a><a href="#" class="footer-legal-link">HIPAA Notice</a></div></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

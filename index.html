@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Mobility Center — Premium DME provider specializing in wheelchairs, power chairs, scooters, and accessibility equipment. Medicare & Medicaid accepted." />
+  <meta name="theme-color" content="#1e5fa8" />
+  <title>The Mobility Center | Wheelchairs, Power Chairs &amp; Mobility Equipment</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- Top Bar -->
+<div class="top-bar" role="banner">
+  <div class="container">
+    <div class="top-bar__inner">
+      <div class="top-bar__items">
+        <span class="top-bar__item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <a href="tel:+15551234567">(555) 123-4567</a>
+        </span>
+        <span class="top-bar__item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href="mailto:info@themobilitycenter.com">info@themobilitycenter.com</a>
+        </span>
+      </div>
+      <span>Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 9am–3pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="The Mobility Center — Home">
+        <span class="logo__icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="logo__text">
+          <span class="logo__name">The Mobility Center</span>
+          <span class="logo__tagline">Licensed DME Provider</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="index.html"      class="nav__link">Home</a></li>
+          <li><a href="about.html"      class="nav__link">About Us</a></li>
+          <li><a href="products.html"   class="nav__link">Products</a></li>
+          <li><a href="insurance.html"  class="nav__link">Insurance</a></li>
+          <li><a href="contact.html"    class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--cta btn--sm">Request Equipment</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Mobile navigation">
+  <div class="mobile-menu__header">
+    <a href="index.html" class="logo" aria-label="The Mobility Center">
+      <span class="logo__icon" aria-hidden="true">
+        <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg>
+      </span>
+      <span class="logo__text">
+        <span class="logo__name">The Mobility Center</span>
+      </span>
+    </a>
+    <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile navigation">
+    <ul class="mobile-nav" role="list">
+      <li><a href="index.html"     class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html"     class="mobile-nav__link">About Us</a></li>
+      <li><a href="products.html"  class="mobile-nav__link">Products &amp; Services</a></li>
+      <li><a href="insurance.html" class="mobile-nav__link">Insurance &amp; Financing</a></li>
+      <li><a href="contact.html"   class="mobile-nav__link">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu__cta">
+    <a href="contact.html" class="btn btn--cta btn--full">Request Equipment</a>
+    <a href="insurance.html" class="btn btn--outline btn--full">Check Insurance</a>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="heroHeading">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow" aria-hidden="true">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Licensed &amp; Accredited DME Provider
+          </span>
+          <h1 class="hero__title" id="heroHeading">
+            Empowering Mobility.<br>
+            <span>Restoring Independence.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Premium wheelchairs, mobility devices, and accessibility equipment — delivered with compassionate care for patients and caregivers.
+          </p>
+          <div class="hero__ctas">
+            <a href="contact.html"   class="btn btn--cta  btn--lg">Request Equipment</a>
+            <a href="insurance.html" class="btn btn--outline-white btn--lg">Insurance Eligibility Check</a>
+          </div>
+          <div class="hero__trust" role="list" aria-label="Trust indicators">
+            <span class="hero__trust-item" role="listitem">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Medicare &amp; Medicaid Accepted
+            </span>
+            <span class="hero__trust-item" role="listitem">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Accredited DME Supplier
+            </span>
+            <span class="hero__trust-item" role="listitem">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Free In-Home Assessment
+            </span>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__image-wrap">
+            <div class="hero__badge hero__badge--tl">
+              <span class="hero__badge-icon hero__badge-icon--blue">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm14 1l-3 3-1.5-1.5"/></svg>
+              </span>
+              <span class="hero__badge-text">
+                <span class="hero__badge-value">2,500+</span>
+                <span class="hero__badge-label">Patients Served</span>
+              </span>
+            </div>
+            <div class="hero__image">
+              <svg width="120" height="120" fill="none" viewBox="0 0 24 24" style="opacity:.35;color:#fff" aria-hidden="true">
+                <circle cx="12" cy="5" r="2" fill="currentColor"/>
+                <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/>
+                <circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="hero__badge hero__badge--br">
+              <span class="hero__badge-icon hero__badge-icon--green">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </span>
+              <span class="hero__badge-text">
+                <span class="hero__badge-value">Accredited</span>
+                <span class="hero__badge-label">ACHC Certified</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar" aria-label="Accepted insurance and certifications">
+    <div class="container">
+      <div class="trust-bar__inner" role="list">
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </span>
+          Medicare Accepted
+        </div>
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </span>
+          Medicaid Accepted
+        </div>
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3m4-7h.01M12 14h.01M17 14h.01M7 7h.01M12 7h.01M17 7h.01"/></svg>
+          </span>
+          Licensed DME Supplier
+        </div>
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </span>
+          ACHC Accredited
+        </div>
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </span>
+          Most PPOs Accepted
+        </div>
+        <div class="trust-item" role="listitem">
+          <span class="trust-item__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </span>
+          In-Home Delivery
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="section" aria-labelledby="productsHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Our Products</span>
+        <h2 class="section__title" id="productsHeading">Mobility Solutions for Every Need</h2>
+        <p class="section__subtitle">From manual wheelchairs to advanced power systems, we carry everything your care plan requires.</p>
+      </div>
+      <div class="grid-3">
+        <!-- Wheelchairs -->
+        <article class="product-card" data-animate data-animate-delay="100">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor" opacity=".4"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--blue product-card__badge">Manual</span>
+            <h3 class="product-card__title">Manual Wheelchairs</h3>
+            <p class="product-card__desc">Lightweight, durable manual wheelchairs in standard, ultra-light, and heavy-duty options for every mobility level.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Insurance-covered options</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Custom fitting available</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Folding &amp; rigid styles</li>
+            </ul>
+            <a href="products.html#manual-wheelchairs" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+
+        <!-- Power Chairs -->
+        <article class="product-card" data-animate data-animate-delay="200">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="9" rx="2" stroke="currentColor" stroke-width="1.5" fill="currentColor" opacity=".15"/><circle cx="8" cy="20" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="20" r="2" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M12 9V5M8 9V7M16 9V7"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M9 13h6"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--green product-card__badge">Power</span>
+            <h3 class="product-card__title">Power Wheelchairs</h3>
+            <p class="product-card__desc">Advanced power chairs with programmable controls, long battery life, and pressure-relieving cushion systems.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Medicare Group 2 &amp; 3</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Indoor &amp; outdoor models</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Tilt &amp; recline systems</li>
+            </ul>
+            <a href="products.html#power-wheelchairs" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+
+        <!-- Scooters -->
+        <article class="product-card" data-animate data-animate-delay="300">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M5 17a2 2 0 100-4 2 2 0 000 4zm14 0a2 2 0 100-4 2 2 0 000 4z"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 15h6l2-6h5l1 6"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M13 9l-1-3H8"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--orange product-card__badge">Scooter</span>
+            <h3 class="product-card__title">Mobility Scooters</h3>
+            <p class="product-card__desc">3-wheel and 4-wheel scooters for indoor use, outdoor adventures, and everything in between.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Travel &amp; full-size models</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Easy disassembly</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Up to 25-mile range</li>
+            </ul>
+            <a href="products.html#scooters" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+
+        <!-- Walkers -->
+        <article class="product-card" data-animate data-animate-delay="100">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8 20V8m0 0C8 6 9 5 10 5h4c1 0 2 1 2 3v12M8 8h8M10 5V3M14 5V3"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--blue product-card__badge">Walking Aid</span>
+            <h3 class="product-card__title">Walkers &amp; Rollators</h3>
+            <p class="product-card__desc">Standard walkers, wheeled walkers, and rollators with seats for improved stability and confidence.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Lightweight aluminum</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Adjustable height</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Built-in seat &amp; basket</li>
+            </ul>
+            <a href="products.html#walkers" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+
+        <!-- Lift Chairs -->
+        <article class="product-card" data-animate data-animate-delay="200">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8 10V7a1 1 0 011-1h6a1 1 0 011 1v3M8 18v2M16 18v2M5 14h14"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--green product-card__badge">Seating</span>
+            <h3 class="product-card__title">Lift Chairs</h3>
+            <p class="product-card__desc">Power lift recliners that gently raise and tilt forward to help patients stand with comfort and dignity.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>2, 3 &amp; infinite position</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Heat &amp; massage options</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Medicare Part B covered</li>
+            </ul>
+            <a href="products.html#lift-chairs" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+
+        <!-- Ramps -->
+        <article class="product-card" data-animate data-animate-delay="300">
+          <div class="product-card__img" aria-hidden="true">
+            <svg width="64" height="64" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 18l18-10v10H3z"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M3 18h18"/></svg>
+          </div>
+          <div class="product-card__body">
+            <span class="badge badge--orange product-card__badge">Accessibility</span>
+            <h3 class="product-card__title">Ramps &amp; Home Access</h3>
+            <p class="product-card__desc">Portable, modular, and threshold ramps to eliminate barriers and create safe home accessibility.</p>
+            <ul class="product-card__features" aria-label="Features">
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Professional installation</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>ADA compliant</li>
+              <li class="product-card__feature"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Portable &amp; permanent</li>
+            </ul>
+            <a href="products.html#ramps" class="btn btn--primary btn--full">Request This Item</a>
+          </div>
+        </article>
+      </div>
+      <div class="text-center" style="margin-top:var(--space-10);" data-animate>
+        <a href="products.html" class="btn btn--outline btn--lg">View All Products &amp; Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--dark" aria-labelledby="statsHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Our Impact</span>
+        <h2 class="section__title" id="statsHeading">Trusted by Thousands of Patients</h2>
+      </div>
+      <div class="grid-4">
+        <div class="stat-card" data-animate data-animate-delay="100">
+          <div class="stat-card__number" data-target="2500" data-suffix="+">0</div>
+          <div class="stat-card__label">Patients Served</div>
+        </div>
+        <div class="stat-card" data-animate data-animate-delay="200">
+          <div class="stat-card__number" data-target="15" data-suffix="+">0</div>
+          <div class="stat-card__label">Years in Service</div>
+        </div>
+        <div class="stat-card" data-animate data-animate-delay="300">
+          <div class="stat-card__number" data-target="98" data-suffix="%">0</div>
+          <div class="stat-card__label">Insurance Approval Rate</div>
+        </div>
+        <div class="stat-card" data-animate data-animate-delay="400">
+          <div class="stat-card__number" data-target="50" data-suffix="+">0</div>
+          <div class="stat-card__label">Equipment Brands</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section--alt" aria-labelledby="processHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Simple Process</span>
+        <h2 class="section__title" id="processHeading">Getting Your Equipment is Easy</h2>
+        <p class="section__subtitle">We handle the paperwork, insurance billing, and delivery — so you can focus on what matters.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-animate data-animate-delay="100">
+          <div class="process-step__num" aria-hidden="true">1</div>
+          <h3 class="process-step__title">Contact Us</h3>
+          <p class="process-step__text">Call, email, or fill out our online form. Tell us about your mobility needs and insurance information.</p>
+        </div>
+        <div class="process-step" data-animate data-animate-delay="200">
+          <div class="process-step__num" aria-hidden="true">2</div>
+          <h3 class="process-step__title">Insurance Verification</h3>
+          <p class="process-step__text">We verify your coverage and benefits with Medicare, Medicaid, or your private insurer — at no cost to you.</p>
+        </div>
+        <div class="process-step" data-animate data-animate-delay="300">
+          <div class="process-step__num" aria-hidden="true">3</div>
+          <h3 class="process-step__title">Doctor's Order</h3>
+          <p class="process-step__text">We coordinate with your physician to obtain the required prescription and clinical documentation.</p>
+        </div>
+        <div class="process-step" data-animate data-animate-delay="400">
+          <div class="process-step__num" aria-hidden="true">4</div>
+          <h3 class="process-step__title">Delivery &amp; Fitting</h3>
+          <p class="process-step__text">A trained specialist delivers and fits your equipment at home, providing full setup and usage training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" aria-labelledby="testimonialsHeading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__eyebrow">Patient Stories</span>
+        <h2 class="section__title" id="testimonialsHeading">What Our Patients Say</h2>
+        <p class="section__subtitle">Real experiences from real patients and caregivers who've trusted us with their mobility needs.</p>
+      </div>
+
+      <div class="testimonials-slider" aria-label="Patient testimonials">
+        <div class="testimonials-track">
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"The staff at The Mobility Center made the entire process seamless. They handled all the Medicare paperwork and delivered my power chair within a week. I've regained my independence!"</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">M</div>
+                <div>
+                  <div class="testimonial__name">Margaret T.</div>
+                  <div class="testimonial__role">Power Wheelchair Patient</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"As a caregiver for my father, I was overwhelmed. The Mobility Center guided us every step of the way — from choosing the right scooter to completing the Medicaid authorization."</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">R</div>
+                <div>
+                  <div class="testimonial__name">Robert K.</div>
+                  <div class="testimonial__role">Caregiver</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"After my hip replacement, I needed a walker immediately. They delivered the next morning, showed me exactly how to use it safely. Truly above and beyond service."</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">S</div>
+                <div>
+                  <div class="testimonial__name">Sandra P.</div>
+                  <div class="testimonial__role">Post-Surgery Patient</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"My mom's lift chair has given her back so much dignity and freedom. The delivery team was kind, professional, and patient in explaining everything. Highly recommend."</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">D</div>
+                <div>
+                  <div class="testimonial__name">David H.</div>
+                  <div class="testimonial__role">Family Caregiver</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"The ramp installation transformed our home completely. Our daughter can now move freely between every room. The installer was professional and completed everything in under 3 hours."</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">L</div>
+                <div>
+                  <div class="testimonial__name">Linda &amp; Tom W.</div>
+                  <div class="testimonial__role">Home Accessibility</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__card">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="testimonial__text">"Incredible service from start to finish. My new manual wheelchair fits perfectly and insurance covered most of it. The team was knowledgeable and genuinely caring."</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar" aria-hidden="true">J</div>
+                <div>
+                  <div class="testimonial__name">James C.</div>
+                  <div class="testimonial__role">Manual Wheelchair User</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls" role="group" aria-label="Slider controls">
+          <button class="slider-btn slider-prev" aria-label="Previous testimonials">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="slider-dots" role="group" aria-label="Slide indicators">
+            <button class="slider-dot active" aria-label="Slide 1" aria-pressed="true"></button>
+            <button class="slider-dot" aria-label="Slide 2" aria-pressed="false"></button>
+            <button class="slider-dot" aria-label="Slide 3" aria-pressed="false"></button>
+            <button class="slider-dot" aria-label="Slide 4" aria-pressed="false"></button>
+          </div>
+          <button class="slider-btn slider-next" aria-label="Next testimonials">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" aria-labelledby="ctaHeading">
+    <div class="container">
+      <div data-animate>
+        <h2 class="cta-section__title" id="ctaHeading">Ready to Restore Your Independence?</h2>
+        <p class="cta-section__text">Our specialists are standing by to help you find the right equipment and navigate your insurance benefits.</p>
+        <div class="btn-group">
+          <a href="contact.html"   class="btn btn--cta  btn--lg">Request Equipment Today</a>
+          <a href="tel:+15551234567" class="btn btn--outline-white btn--lg">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            (555) 123-4567
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="The Mobility Center">
+          <span class="logo__icon" aria-hidden="true">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3m-3-3H9m0 0l-2 4h10l-1-4"/><circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="19" r="2" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <span class="logo__text">
+            <span class="logo__name">The Mobility Center</span>
+            <span class="logo__tagline">Licensed DME Provider</span>
+          </span>
+        </a>
+        <p class="footer-brand__desc">Empowering patients with the mobility equipment and accessibility solutions they need to live full, independent lives. Medicare, Medicaid &amp; most insurance accepted.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter / X">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Quick Links</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html"     class="footer-link">Home</a></li>
+          <li><a href="about.html"     class="footer-link">About Us</a></li>
+          <li><a href="products.html"  class="footer-link">Products &amp; Services</a></li>
+          <li><a href="insurance.html" class="footer-link">Insurance &amp; Financing</a></li>
+          <li><a href="contact.html"   class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Products</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="products.html#manual-wheelchairs" class="footer-link">Manual Wheelchairs</a></li>
+          <li><a href="products.html#power-wheelchairs"  class="footer-link">Power Wheelchairs</a></li>
+          <li><a href="products.html#scooters"           class="footer-link">Mobility Scooters</a></li>
+          <li><a href="products.html#walkers"            class="footer-link">Walkers &amp; Rollators</a></li>
+          <li><a href="products.html#lift-chairs"        class="footer-link">Lift Chairs</a></li>
+          <li><a href="products.html#ramps"              class="footer-link">Ramps &amp; Access</a></li>
+          <li><a href="products.html#repairs"            class="footer-link">Repairs &amp; Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Contact</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="tel:+15551234567" class="footer-link">(555) 123-4567</a></li>
+          <li><a href="mailto:info@themobilitycenter.com" class="footer-link">info@themobilitycenter.com</a></li>
+          <li><span class="footer-link">123 Healthcare Blvd,<br>Suite 100<br>Your City, ST 00000</span></li>
+        </ul>
+        <div style="margin-top:var(--space-5)">
+          <p style="font-size:var(--text-sm);color:rgba(255,255,255,.5);margin-bottom:var(--space-1)"><strong style="color:rgba(255,255,255,.7)">Hours:</strong></p>
+          <p style="font-size:var(--text-sm);color:rgba(255,255,255,.5);margin:0">Mon–Fri: 8am–6pm</p>
+          <p style="font-size:var(--text-sm);color:rgba(255,255,255,.5);margin:0">Saturday: 9am–3pm</p>
+          <p style="font-size:var(--text-sm);color:rgba(255,255,255,.5);margin:0">Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p style="color:rgba(255,255,255,.45);font-size:var(--text-sm)">&copy; 2024 The Mobility Center. All rights reserved.</p>
+      <div class="footer-bottom__legal">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Terms of Service</a>
+        <a href="#" class="footer-legal-link">Accessibility Statement</a>
+        <a href="#" class="footer-legal-link">HIPAA Notice</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
