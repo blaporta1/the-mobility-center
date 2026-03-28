@@ -1,9 +1,21 @@
 import { useEffect, useRef, useState } from 'react'
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ChevronRight, Phone, MapPin, Clock, ArrowRight } from 'lucide-react'
+import Products from './pages/Products.jsx'
+import Services from './pages/Services.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    ScrollTrigger.refresh()
+  }, [pathname])
+  return null
+}
 
 // ─── DESIGN TOKENS ────────────────────────────────────────────────────────────
 const C = {
@@ -36,24 +48,30 @@ function Navbar() {
       }}
     >
       <div className="flex items-center gap-8">
-        <span
+        <Link
+          to="/"
           className="text-sm font-bold tracking-[0.12em] uppercase whitespace-nowrap"
-          style={{ color: C.ivory, fontFamily: 'Inter' }}
+          style={{ color: C.ivory, fontFamily: 'Inter', textDecoration: 'none' }}
         >
           The Mobility Center
-        </span>
+        </Link>
         <div className="hidden md:flex items-center gap-7">
-          {['Products', 'Services', 'Insurance', 'About'].map((link) => (
-            <a
-              key={link}
-              href="#"
+          {[
+            { label: 'Products',  to: '/products' },
+            { label: 'Services',  to: '/services' },
+            { label: 'Insurance', to: '#' },
+            { label: 'About',     to: '#' },
+          ].map(({ label, to }) => (
+            <Link
+              key={label}
+              to={to}
               className="text-sm tracking-wide transition-all duration-200 hover:-translate-y-px"
-              style={{ color: `${C.ivory}80`, fontFamily: 'Inter' }}
+              style={{ color: `${C.ivory}80`, fontFamily: 'Inter', textDecoration: 'none' }}
               onMouseEnter={e => (e.currentTarget.style.color = C.ivory)}
               onMouseLeave={e => (e.currentTarget.style.color = `${C.ivory}80`)}
             >
-              {link}
-            </a>
+              {label}
+            </Link>
           ))}
         </div>
         <button
@@ -1463,11 +1481,10 @@ function Footer() {
   )
 }
 
-// ─── APP ──────────────────────────────────────────────────────────────────────
-export default function App() {
+// ─── HOME PAGE ────────────────────────────────────────────────────────────────
+function HomePage() {
   return (
     <div style={{ background: C.obsidian }}>
-      <Navbar />
       <Hero />
       <Marquee />
       <Features />
@@ -1477,6 +1494,21 @@ export default function App() {
       <ConsultCTA />
       <Footer />
     </div>
+  )
+}
+
+// ─── APP ──────────────────────────────────────────────────────────────────────
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
