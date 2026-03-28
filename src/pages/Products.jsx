@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const C = {
   obsidian: '#0D0D12',
-  champagne: '#C9A84C',
+  champagne: '#2B5CE6',
   ivory:     '#FAF8F5',
   slate:     '#2A2A35',
 }
@@ -155,7 +155,7 @@ function ProductCard({ cat, index }) {
       className="product-card group relative overflow-hidden rounded-[1.75rem] transition-transform duration-300"
       style={{
         background: C.slate,
-        border: `1px solid rgba(201,168,76,${hovered ? '0.25' : '0.1'})`,
+        border: `1px solid rgba(43,92,230,${hovered ? '0.25' : '0.1'})`,
         boxShadow: hovered ? '0 24px 60px rgba(0,0,0,0.4)' : '0 8px 30px rgba(0,0,0,0.2)',
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'all 0.3s cubic-bezier(0.25,0.46,0.45,0.94)',
@@ -354,7 +354,7 @@ function InsuranceBanner() {
           className="relative overflow-hidden rounded-[2rem] px-10 py-12 md:px-16"
           style={{
             background: `linear-gradient(135deg, ${C.obsidian} 0%, #1A1A26 100%)`,
-            border: `1px solid rgba(201,168,76,0.2)`,
+            border: `1px solid rgba(43,92,230,0.2)`,
           }}
         >
           <div
@@ -390,7 +390,7 @@ function InsuranceBanner() {
                   background: C.champagne,
                   color: C.obsidian,
                   fontFamily: 'Inter',
-                  boxShadow: `0 8px 28px rgba(201,168,76,0.35)`,
+                  boxShadow: `0 8px 28px rgba(43,92,230,0.35)`,
                 }}
               >
                 Check Your Coverage
@@ -410,7 +410,7 @@ function Footer() {
       className="px-6 pb-10 pt-16"
       style={{
         background: C.obsidian,
-        borderTop: `1px solid rgba(201,168,76,0.1)`,
+        borderTop: `1px solid rgba(43,92,230,0.1)`,
         borderRadius: '3rem 3rem 0 0',
       }}
     >

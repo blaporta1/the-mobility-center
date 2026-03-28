@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const C = {
   obsidian: '#0D0D12',
-  champagne: '#C9A84C',
+  champagne: '#2B5CE6',
   ivory:     '#FAF8F5',
   slate:     '#2A2A35',
 }
@@ -169,7 +169,7 @@ function PageHero() {
               background: C.champagne,
               color: C.obsidian,
               fontFamily: 'Inter',
-              boxShadow: `0 8px 28px rgba(201,168,76,0.35)`,
+              boxShadow: `0 8px 28px rgba(43,92,230,0.35)`,
             }}
           >
             Schedule a Free Consultation
@@ -203,7 +203,7 @@ function ServiceCard({ svc, index }) {
       className="service-card relative overflow-hidden rounded-[1.75rem] p-8"
       style={{
         background: index % 2 === 0 ? C.slate : `${C.obsidian}CC`,
-        border: `1px solid rgba(201,168,76,${hovered ? '0.22' : '0.1'})`,
+        border: `1px solid rgba(43,92,230,${hovered ? '0.22' : '0.1'})`,
         boxShadow: hovered ? '0 24px 60px rgba(0,0,0,0.4)' : '0 8px 30px rgba(0,0,0,0.15)',
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'all 0.3s cubic-bezier(0.25,0.46,0.45,0.94)',
@@ -396,7 +396,7 @@ function ProcessTimeline() {
               className="timeline-item rounded-[1.5rem] p-6"
               style={{
                 background: C.obsidian,
-                border: '1px solid rgba(201,168,76,0.1)',
+                border: '1px solid rgba(43,92,230,0.1)',
               }}
             >
               <div
@@ -477,7 +477,7 @@ function Testimonials() {
               className="testimonial-card rounded-[1.75rem] p-8"
               style={{
                 background: C.slate,
-                border: '1px solid rgba(201,168,76,0.1)',
+                border: '1px solid rgba(43,92,230,0.1)',
               }}
             >
               <div className="mb-6 flex gap-1">
@@ -576,7 +576,7 @@ function CTA() {
               background: C.champagne,
               color: C.obsidian,
               fontFamily: 'Inter',
-              boxShadow: `0 12px 40px rgba(201,168,76,0.4)`,
+              boxShadow: `0 12px 40px rgba(43,92,230,0.4)`,
             }}
           >
             Schedule a Free Consultation
@@ -606,7 +606,7 @@ function Footer() {
       className="px-6 pb-10 pt-16"
       style={{
         background: C.obsidian,
-        borderTop: `1px solid rgba(201,168,76,0.1)`,
+        borderTop: `1px solid rgba(43,92,230,0.1)`,
         borderRadius: '3rem 3rem 0 0',
       }}
     >

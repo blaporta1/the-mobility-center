@@ -20,7 +20,7 @@ function ScrollToTop() {
 // ─── DESIGN TOKENS ────────────────────────────────────────────────────────────
 const C = {
   obsidian: '#0D0D12',
-  champagne: '#C9A84C',
+  champagne: '#2B5CE6',
   ivory:     '#FAF8F5',
   slate:     '#2A2A35',
 }
@@ -41,7 +41,7 @@ function Navbar() {
       style={{
         background: scrolled ? 'rgba(13,13,18,0.88)' : 'transparent',
         backdropFilter: scrolled ? 'blur(24px)' : 'none',
-        border: scrolled ? '1px solid rgba(201,168,76,0.18)' : '1px solid transparent',
+        border: scrolled ? '1px solid rgba(43,92,230,0.18)' : '1px solid transparent',
         borderRadius: '9999px',
         padding: '12px 28px',
         boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,0.4)' : 'none',
@@ -80,7 +80,7 @@ function Navbar() {
             background: C.champagne,
             color: C.obsidian,
             fontFamily: 'Inter',
-            boxShadow: `0 4px 20px rgba(201,168,76,0.3)`,
+            boxShadow: `0 4px 20px rgba(43,92,230,0.3)`,
           }}
         >
           Book Free Consult
@@ -213,7 +213,7 @@ function Hero() {
               fontFamily: 'Inter',
               padding: '16px 36px',
               fontSize: '1rem',
-              boxShadow: `0 8px 32px rgba(201,168,76,0.35)`,
+              boxShadow: `0 8px 32px rgba(43,92,230,0.35)`,
             }}
           >
             Schedule a Free Consultation
@@ -273,7 +273,7 @@ function ShufflerCard() {
       className="feature-card flex h-full flex-col rounded-[2rem] p-7"
       style={{
         background: C.slate,
-        border: '1px solid rgba(201,168,76,0.12)',
+        border: '1px solid rgba(43,92,230,0.12)',
         boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
       }}
     >
@@ -398,7 +398,7 @@ function TypewriterCard() {
       className="feature-card flex h-full flex-col rounded-[2rem] p-7"
       style={{
         background: C.slate,
-        border: '1px solid rgba(201,168,76,0.12)',
+        border: '1px solid rgba(43,92,230,0.12)',
         boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
       }}
     >
@@ -543,7 +543,7 @@ function SchedulerCard() {
       className="feature-card flex h-full flex-col rounded-[2rem] p-7"
       style={{
         background: C.slate,
-        border: '1px solid rgba(201,168,76,0.12)',
+        border: '1px solid rgba(43,92,230,0.12)',
         boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
       }}
     >
@@ -855,14 +855,14 @@ function RotatingCircles() {
         .rc2 { animation: rotCCW 15s linear infinite; transform-origin: 100px 100px; }
         .rc3 { animation: rotCW 22s linear infinite; transform-origin: 100px 100px; }
       `}</style>
-      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(201,168,76,0.15)" strokeWidth="1" />
-      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(201,168,76,0.35)" strokeWidth="1"
+      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(43,92,230,0.15)" strokeWidth="1" />
+      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(43,92,230,0.35)" strokeWidth="1"
         strokeDasharray="18 12" className="rc1" />
-      <circle cx="100" cy="100" r="58" fill="none" stroke="rgba(201,168,76,0.5)" strokeWidth="1.5"
+      <circle cx="100" cy="100" r="58" fill="none" stroke="rgba(43,92,230,0.5)" strokeWidth="1.5"
         strokeDasharray="8 5" className="rc2" />
-      <circle cx="100" cy="100" r="36" fill="none" stroke="rgba(201,168,76,0.7)" strokeWidth="1.5"
+      <circle cx="100" cy="100" r="36" fill="none" stroke="rgba(43,92,230,0.7)" strokeWidth="1.5"
         strokeDasharray="4 3" className="rc3" />
-      <circle cx="100" cy="100" r="7" fill="#C9A84C" opacity="0.9" />
+      <circle cx="100" cy="100" r="7" fill="#2B5CE6" opacity="0.9" />
       <circle cx="100" cy="100" r="3" fill="#FAF8F5" />
     </svg>
   )
@@ -897,16 +897,16 @@ function ScannerGrid() {
             cx={12 + col * 26}
             cy={12 + row * 26}
             r="2.5"
-            fill="rgba(201,168,76,0.25)"
+            fill="rgba(43,92,230,0.25)"
           />
         ))
       )}
       <line
         ref={lineRef}
         x1="0" y1="0" x2="0" y2="160"
-        stroke="#C9A84C"
+        stroke="#2B5CE6"
         strokeWidth="1.5"
-        style={{ filter: 'drop-shadow(0 0 6px rgba(201,168,76,0.8))' }}
+        style={{ filter: 'drop-shadow(0 0 6px rgba(43,92,230,0.8))' }}
       />
     </svg>
   )
@@ -935,11 +935,11 @@ function EKGLine() {
         ref={pathRef}
         d="M0,45 L35,45 L45,45 L55,12 L65,78 L75,22 L85,45 L120,45 L135,45 L145,12 L155,78 L165,22 L175,45 L240,45"
         fill="none"
-        stroke="#C9A84C"
+        stroke="#2B5CE6"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
-        style={{ filter: 'drop-shadow(0 0 5px rgba(201,168,76,0.6))' }}
+        style={{ filter: 'drop-shadow(0 0 5px rgba(43,92,230,0.6))' }}
       />
     </svg>
   )
@@ -1328,7 +1328,7 @@ function ConsultCTA() {
               background: C.champagne,
               color: C.obsidian,
               fontFamily: 'Inter',
-              boxShadow: `0 12px 40px rgba(201,168,76,0.4)`,
+              boxShadow: `0 12px 40px rgba(43,92,230,0.4)`,
             }}
           >
             Schedule a Free Consultation
@@ -1358,7 +1358,7 @@ function Footer() {
       className="px-6 pb-10 pt-16"
       style={{
         background: C.obsidian,
-        borderTop: `1px solid rgba(201,168,76,0.1)`,
+        borderTop: `1px solid rgba(43,92,230,0.1)`,
         borderRadius: '3rem 3rem 0 0',
       }}
     >
