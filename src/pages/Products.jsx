@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const C = {
   obsidian: '#0D0D12',
-  champagne: '#2B5CE6',
+  champagne: '#2EBFA5',
   ivory:     '#FAF8F5',
   slate:     '#2A2A35',
 }
@@ -110,7 +110,7 @@ function PageHero() {
           <div className="h-px w-6" style={{ background: C.champagne }} />
           <span
             className="text-xs uppercase tracking-[0.2em]"
-            style={{ color: C.champagne, fontFamily: 'JetBrains Mono' }}
+            style={{ color: C.champagne, fontFamily: 'Open Sans' }}
           >
             Products
           </span>
@@ -120,7 +120,7 @@ function PageHero() {
           className="ph-line font-bold leading-[0.93] tracking-[-0.03em]"
           style={{
             color: C.ivory,
-            fontFamily: 'Inter',
+            fontFamily: 'Montserrat',
             fontSize: 'clamp(3rem, 7vw, 6rem)',
             maxWidth: 760,
           }}
@@ -128,7 +128,7 @@ function PageHero() {
           Every product,{' '}
           <span
             className="italic"
-            style={{ color: C.champagne, fontFamily: 'Playfair Display' }}
+            style={{ color: C.champagne, fontFamily: 'Montserrat' }}
           >
             expertly chosen.
           </span>
@@ -136,7 +136,7 @@ function PageHero() {
 
         <p
           className="ph-line mt-6 max-w-[520px] text-lg leading-relaxed"
-          style={{ color: `${C.ivory}60`, fontFamily: 'Inter' }}
+          style={{ color: `${C.ivory}60`, fontFamily: 'Montserrat' }}
         >
           We carry over 500 products from the industry's most trusted brands — and every
           one is available for a personalized fitting before you buy.
@@ -155,7 +155,7 @@ function ProductCard({ cat, index }) {
       className="product-card group relative overflow-hidden rounded-[1.75rem] transition-transform duration-300"
       style={{
         background: C.slate,
-        border: `1px solid rgba(43,92,230,${hovered ? '0.25' : '0.1'})`,
+        border: `1px solid rgba(46,191,165,${hovered ? '0.25' : '0.1'})`,
         boxShadow: hovered ? '0 24px 60px rgba(0,0,0,0.4)' : '0 8px 30px rgba(0,0,0,0.2)',
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'all 0.3s cubic-bezier(0.25,0.46,0.45,0.94)',
@@ -187,7 +187,7 @@ function ProductCard({ cat, index }) {
             style={{
               background: C.champagne,
               color: C.obsidian,
-              fontFamily: 'JetBrains Mono',
+              fontFamily: 'Open Sans',
             }}
           >
             {cat.tag}
@@ -199,19 +199,19 @@ function ProductCard({ cat, index }) {
       <div className="p-6">
         <div
           className="mb-1 text-xs uppercase tracking-[0.15em]"
-          style={{ color: `${C.champagne}80`, fontFamily: 'JetBrains Mono' }}
+          style={{ color: `${C.champagne}80`, fontFamily: 'Open Sans' }}
         >
           {String(index + 1).padStart(2, '0')}
         </div>
         <h3
           className="mb-3 text-xl font-bold"
-          style={{ color: C.ivory, fontFamily: 'Inter' }}
+          style={{ color: C.ivory, fontFamily: 'Montserrat' }}
         >
           {cat.label}
         </h3>
         <p
           className="mb-5 text-sm leading-relaxed"
-          style={{ color: `${C.ivory}55`, fontFamily: 'Inter' }}
+          style={{ color: `${C.ivory}55`, fontFamily: 'Montserrat' }}
         >
           {cat.desc}
         </p>
@@ -222,7 +222,7 @@ function ProductCard({ cat, index }) {
             <li
               key={item}
               className="flex items-center gap-2 text-xs"
-              style={{ color: `${C.ivory}50`, fontFamily: 'Inter' }}
+              style={{ color: `${C.ivory}50`, fontFamily: 'Montserrat' }}
             >
               <div
                 className="h-1 w-1 rounded-full flex-shrink-0"
@@ -235,7 +235,7 @@ function ProductCard({ cat, index }) {
 
         <button
           className="flex items-center gap-2 text-sm font-semibold transition-all duration-200 hover:gap-3"
-          style={{ color: C.champagne, fontFamily: 'Inter' }}
+          style={{ color: C.champagne, fontFamily: 'Montserrat' }}
         >
           Request a Fitting <ArrowRight size={15} />
         </button>
@@ -279,13 +279,13 @@ function ProductsGrid() {
         >
           <div
             className="text-xs uppercase tracking-[0.2em]"
-            style={{ color: `${C.ivory}40`, fontFamily: 'JetBrains Mono' }}
+            style={{ color: `${C.ivory}40`, fontFamily: 'Open Sans' }}
           >
             {CATEGORIES.length} Categories Available
           </div>
           <div
             className="text-xs uppercase tracking-[0.12em]"
-            style={{ color: `${C.ivory}35`, fontFamily: 'JetBrains Mono' }}
+            style={{ color: `${C.ivory}35`, fontFamily: 'Open Sans' }}
           >
             Insurance accepted · In-store fitting
           </div>
@@ -318,7 +318,7 @@ function BrandsStrip() {
           <span
             key={i}
             className="text-xs uppercase tracking-[0.18em]"
-            style={{ color: `${C.ivory}35`, fontFamily: 'JetBrains Mono' }}
+            style={{ color: `${C.ivory}35`, fontFamily: 'Open Sans' }}
           >
             {b}
           </span>
@@ -354,7 +354,7 @@ function InsuranceBanner() {
           className="relative overflow-hidden rounded-[2rem] px-10 py-12 md:px-16"
           style={{
             background: `linear-gradient(135deg, ${C.obsidian} 0%, #1A1A26 100%)`,
-            border: `1px solid rgba(43,92,230,0.2)`,
+            border: `1px solid rgba(46,191,165,0.2)`,
           }}
         >
           <div
@@ -365,19 +365,19 @@ function InsuranceBanner() {
             <div className="ins-el max-w-lg">
               <div
                 className="mb-3 text-xs uppercase tracking-[0.18em]"
-                style={{ color: C.champagne, fontFamily: 'JetBrains Mono' }}
+                style={{ color: C.champagne, fontFamily: 'Open Sans' }}
               >
                 Insurance & Billing
               </div>
               <h3
                 className="mb-3 font-bold leading-tight tracking-[-0.02em]"
-                style={{ color: C.ivory, fontFamily: 'Inter', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+                style={{ color: C.ivory, fontFamily: 'Montserrat', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
               >
                 We handle your insurance so you don't have to.
               </h3>
               <p
                 className="text-base leading-relaxed"
-                style={{ color: `${C.ivory}60`, fontFamily: 'Inter' }}
+                style={{ color: `${C.ivory}60`, fontFamily: 'Montserrat' }}
               >
                 We work directly with Medicare, Medicaid, and most major private insurers.
                 Bring your prescription — we'll take care of the rest.
@@ -389,8 +389,8 @@ function InsuranceBanner() {
                 style={{
                   background: C.champagne,
                   color: C.obsidian,
-                  fontFamily: 'Inter',
-                  boxShadow: `0 8px 28px rgba(43,92,230,0.35)`,
+                  fontFamily: 'Montserrat',
+                  boxShadow: `0 8px 28px rgba(46,191,165,0.35)`,
                 }}
               >
                 Check Your Coverage
@@ -410,7 +410,7 @@ function Footer() {
       className="px-6 pb-10 pt-16"
       style={{
         background: C.obsidian,
-        borderTop: `1px solid rgba(43,92,230,0.1)`,
+        borderTop: `1px solid rgba(46,191,165,0.1)`,
         borderRadius: '3rem 3rem 0 0',
       }}
     >
@@ -423,22 +423,22 @@ function Footer() {
             <Link
               to="/"
               className="mb-3 block text-2xl font-bold tracking-[-0.02em]"
-              style={{ color: C.ivory, fontFamily: 'Inter', textDecoration: 'none' }}
+              style={{ color: C.ivory, fontFamily: 'Montserrat', textDecoration: 'none' }}
             >
               The Mobility Center
             </Link>
-            <p className="max-w-[280px] text-sm leading-relaxed" style={{ color: `${C.ivory}45`, fontFamily: 'Inter' }}>
-              Expert mobility solutions for independent living. Serving our community since 1985.
+            <p className="max-w-[280px] text-sm leading-relaxed" style={{ color: `${C.ivory}45`, fontFamily: 'Montserrat' }}>
+              Restore Independence. Live Fully. DME Company · Serving our community since 1985.
             </p>
           </div>
           <div>
-            <div className="mb-5 text-xs uppercase tracking-[0.16em]" style={{ color: `${C.champagne}70`, fontFamily: 'JetBrains Mono' }}>
+            <div className="mb-5 text-xs uppercase tracking-[0.16em]" style={{ color: `${C.champagne}70`, fontFamily: 'Open Sans' }}>
               Navigation
             </div>
             <ul className="space-y-3">
               {[['Products', '/products'], ['Services', '/services'], ['Insurance', '#'], ['About Us', '#'], ['Contact', '#']].map(([label, to]) => (
                 <li key={label}>
-                  <Link to={to} className="inline-block text-sm transition-all duration-150 hover:-translate-y-px" style={{ color: `${C.ivory}55`, fontFamily: 'Inter', textDecoration: 'none' }}>
+                  <Link to={to} className="inline-block text-sm transition-all duration-150 hover:-translate-y-px" style={{ color: `${C.ivory}55`, fontFamily: 'Montserrat', textDecoration: 'none' }}>
                     {label}
                   </Link>
                 </li>
@@ -446,23 +446,23 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <div className="mb-5 text-xs uppercase tracking-[0.16em]" style={{ color: `${C.champagne}70`, fontFamily: 'JetBrains Mono' }}>Contact</div>
+            <div className="mb-5 text-xs uppercase tracking-[0.16em]" style={{ color: `${C.champagne}70`, fontFamily: 'Open Sans' }}>Contact</div>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Inter' }}><Phone size={13} style={{ color: C.champagne }} />(555) 000-0000</li>
-              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Inter' }}><MapPin size={13} style={{ color: C.champagne }} />Your City, ST 00000</li>
-              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Inter' }}><Clock size={13} style={{ color: C.champagne }} />Mon–Sat · 9am–6pm</li>
+              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Montserrat' }}><Phone size={13} style={{ color: C.champagne }} />(555) 000-0000</li>
+              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Montserrat' }}><MapPin size={13} style={{ color: C.champagne }} />Your City, ST 00000</li>
+              <li className="flex items-center gap-2 text-sm" style={{ color: `${C.ivory}55`, fontFamily: 'Montserrat' }}><Clock size={13} style={{ color: C.champagne }} />Mon–Sat · 9am–6pm</li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-5 pt-8 md:flex-row">
-          <div className="text-xs" style={{ color: `${C.ivory}28`, fontFamily: 'JetBrains Mono' }}>© 2025 The Mobility Center. All rights reserved.</div>
+          <div className="text-xs" style={{ color: `${C.ivory}28`, fontFamily: 'Open Sans' }}>© 2025 The Mobility Center. All rights reserved.</div>
           <div className="flex items-center gap-2">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
-            <span className="text-xs tracking-[0.12em] uppercase" style={{ color: `${C.ivory}35`, fontFamily: 'JetBrains Mono' }}>System Operational</span>
+            <span className="text-xs tracking-[0.12em] uppercase" style={{ color: `${C.ivory}35`, fontFamily: 'Open Sans' }}>System Operational</span>
           </div>
           <div className="flex gap-6">
             {['Privacy', 'Terms', 'Accessibility'].map((item) => (
-              <a key={item} href="#" className="inline-block text-xs transition-all duration-150 hover:-translate-y-px" style={{ color: `${C.ivory}30`, fontFamily: 'Inter' }}>{item}</a>
+              <a key={item} href="#" className="inline-block text-xs transition-all duration-150 hover:-translate-y-px" style={{ color: `${C.ivory}30`, fontFamily: 'Montserrat' }}>{item}</a>
             ))}
           </div>
         </div>

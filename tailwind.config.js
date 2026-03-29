@@ -4,13 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        playfair: ['"Playfair Display"', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        opensans: ['"Open Sans"', 'sans-serif'],
       },
       colors: {
         obsidian: '#0D0D12',
-        champagne: '#C9A84C',
+        teal: '#2EBFA5',
+        navy: '#1A4FBB',
+        cream: '#F4F7F9',
         ivory: '#FAF8F5',
         slate: '#2A2A35',
         'slate-light': '#3A3A47',
